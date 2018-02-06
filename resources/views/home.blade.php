@@ -1,3 +1,6 @@
+<!--ul class="social_links">
+            <li style="margin-top: 14px; margin-left: 5px;">@include('call-request::link')</li-->
+
 @extends('layouts.app')
 
 @section('content')

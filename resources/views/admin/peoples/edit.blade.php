@@ -17,6 +17,9 @@
                     {{Form::close()}}
                 </div>
             </div>
+            <a class="btn btn-info btn-xs col-md-1 col-sm-2 col-xs-2" href="{{ url('/admin')}}">
+                <i class="fa fa-backward" aria-hidden="true"></i> admin
+            </a>
         </div>
     </div>
 

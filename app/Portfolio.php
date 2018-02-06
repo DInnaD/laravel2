@@ -8,5 +8,5 @@ class Portfolio extends Model
 {
     //
     protected $table = 'portfolios';
-    protected $fillable = ['name', 'filter', 'images'];
+    protected $fillable = ['name', 'filter', 'images', 'link'];
 }

@@ -10,6 +10,10 @@ use App\Portfolio;
 use App\Service;
 use App\Page;
 
+use App\SocialPeople;
+use App\Logo;
+use App\Socialy;
+
 use Mail;
 use DB;
 
@@ -96,13 +100,17 @@ class IndexController extends Controller
 
     }
         $pages = Page::all();
-        $portfolios = Portfolio::get(array('name', 'filter', 'images' ));
+        $portfolios = Portfolio::get(array('name', 'filter', 'images', 'link' ));
         $services = Service::where('id','<',20)->get();
-        $peoples = People::take(3)->get();
+        $peoples = People::all();//take(3)->get();
 
+        
         $tags = DB::table('portfolios')->distinct()->pluck('filter');
-     //dd($tags);
-
+     //dd($socials);
+        $socials = Socialy::take(24)->get();
+        //dd($socials);
+        $socialPeoples = SocialPeople::take(5)->get();
+        $logos = Logo::take(1)->get();
         //MENU
         $menu = array();
         //from db
@@ -130,7 +138,10 @@ class IndexController extends Controller
             'portfolios' => $portfolios,
             'peoples' => $peoples,
             'tags'=> $tags,
-
+            'socials' => $socials,
+            'socialPeoples' => $socialPeoples,
+        
+            'logos'=> $logos,
         ));// ne k maketu ('layouts.site'); a k promegutochnomu
     }
     /**

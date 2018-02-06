@@ -73,11 +73,15 @@ class PagesController extends Controller
 if($request->hasFile('images')){
 
 
-    $destinationPath = "public_path().'/assets/img'";
+    $destinationPath = "public_path().'/assets/img/'";
     $file=$request->file('images');
     $extension=$file->getClientOriginalExtension();
     $fileName = rand(1111,9999). $extension;
     $file->move($destinationPath, $fileName);
+
+    //dd($file);
+
+
     //$images = $fileName; 
 }
         $page->create($request->except('_token'));

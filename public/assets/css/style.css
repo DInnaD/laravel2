@@ -881,7 +881,7 @@ img {
 }
 
 .social_links li {
-    float: left;
+    float: right;
     margin-right: 4px;
 }
 
@@ -892,7 +892,7 @@ img {
     text-align: center;
     line-height: 50px;
     font-size: 25px;
-    color: #fff;
+    color: #151414;
 }
 
 .social_links li a:hover, .social_links li a:focus {

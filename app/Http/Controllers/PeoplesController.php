@@ -30,7 +30,7 @@ class PeoplesController extends Controller
     public function create()
     {
         //
-        return view('admin.peoples.create', compact('eoplepeople'));
+        return view('admin.peoples.create', compact('people'));
     }
 
     /**

@@ -8,11 +8,13 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-               
+               <div class="form-group">
+             
                     <div class="panel-heading">Peoples</div>
 
                     <div class="panel-body">
                     
+                        {{ link_to_route('admin', 'admin', null, ['class' => 'btn btn-info btn-xs']) }}
                         {{ link_to_route('peoples.create', 'create', null, ['class' => 'btn btn-info btn-xs']) }}
 
                         <hr>

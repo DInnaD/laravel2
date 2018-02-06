@@ -177,6 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Unisharp\Ckeditor\ServiceProvider::class,
+        //LaravelNews\CallRequest\ServiceProvider::class,
         //Collective\Html\HtmlServiceProvider::class,
     ],
 

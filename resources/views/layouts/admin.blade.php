@@ -66,13 +66,8 @@
                         </div>
                     @endif
 
-                    You are logged in!
-       <div class="form-group">
-        
-        <a class="btn btn-info btn-xs col-md-1 col-sm-2 col-xs-2" href="{{-- route('admin.pages.index', compact('pages')) --}}{{ url('/'),'Back' }}{{-- link_to_route('admin.index', compact('data')) --}}">
-                <i class="fa fa-backward" aria-hidden="true"></i> back
-        </a>
-        </div>
+                    You are logged in as ADMIN!
+       
                 </div>
             </div>
         </div>

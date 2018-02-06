@@ -19,6 +19,8 @@ Route::group([], function (){
 	Route::match(['get','post'],'/',['uses'=>'IndexController@execute','as'=>'home']);
  
     Route::get('/page/{alias}',['uses'=>'PageController@execute','as'=>'page']);
+    //Route::match(['get'],'/',['uses'=>'IndexController@execute','as'=>'home']);
+ 
      //admin
      // Route::auth();
 	});
@@ -29,7 +31,12 @@ Route::group([], function (){
 Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('admin');
-//Route::get('/', ['uses'=>'HomeController@index','as'=>'admin'])->name('home'); 	
+
+//Route::get('/', 'IndexController@execute')->name('home');
+// Route::get('call-request/form', 'CallRequestController@form')->name('call_request_form');
+//Route::get('/', ['uses'=>'HomeController@index','as'=>'admin'])->name('home'); 
+
+		
 /**
 * Admin page route
 */
@@ -41,7 +48,9 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function (){
 * WITH RESOURCE
 */
 Route::resource('pages', 'PagesController');
-
+Route::resource('logos', 'LogosController');
+Route::resource('socials', 'SocialysController');
+Route::resource('socialPeoples', 'SocialPeoplesController');
 Route::resource('portfolios', 'PortfoliosController');	
 Route::resource('services', 'ServicesController');
 Route::resource('peoples', 'PeoplesController');	    

@@ -45,7 +45,7 @@ class PortfoliosController extends Controller
 
         $portfolio->create($request->except('_token'));
 
-        return redirect()->route('pages.index', compact('portfolio'))->with('status', 'Portfolio added');
+        return redirect()->route('portfolios.index', compact('portfolio'))->with('status', 'Portfolio added');
     }
 
      /**

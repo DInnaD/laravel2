@@ -6,13 +6,13 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
                
                     <div class="panel-heading">Portfolios</div>
 
                     <div class="panel-body">
-                    
+                        {{ link_to_route('admin', 'admin', null, ['class' => 'btn btn-info btn-xs']) }}
                         {{ link_to_route('portfolios.create', 'create', null, ['class' => 'btn btn-info btn-xs']) }}
 
                         <hr>
@@ -21,13 +21,14 @@
                             
                                 <th width="5%">id</th>
                                 <th width="15%">Name</th>
-                                <th width="25%">Text</th>
-                                <th width="25%">Images</th>                                
+                                <th width="15%">Filter</th>
+                                <th width="15%">Link</th>
+                                <th width="20%">Images</th>                                
                                 <th width="25%">Actions</th>
                             </tr>
                             <tr>
                             
-                                <td colspan="5" class="light-green-background no-padding" title="Create new template">
+                                <td colspan="6" class="light-green-background no-padding" title="Create new template">
                                     <div class="row centered-child">
                                         <div class="col-md-12">
 
@@ -42,7 +43,8 @@
                              
                                 <td>{{$model->id}}</td>
                                 <td>{{$model->name}}</td>
-                                <td>{{$model->text}}</td>                                
+                                <td>{{$model->filter}}</td>
+                                <td>{{$model->link}}</td>       
                                 <td>{{$model->images}}</td>
                                 
                                 
@@ -69,5 +71,6 @@
                 </div>
             </div>
         </div>
+
     </div>
 @endsection
